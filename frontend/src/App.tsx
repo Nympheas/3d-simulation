@@ -1,23 +1,36 @@
+import styles from './App.module.scss';
 import React from 'react';
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
-import './App.css';
-import { Dashboard } from './dashboard/Dashboard';
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import { Provider as SettingsProvider } from 'contexts/Settings';
+import { Provider as NavigationProvider } from 'contexts/Navigation';
+import Dashboard from 'routes/Dashboard';
+import Map from 'routes/Map';
 
-function App() {
-    return (
-        <div className="App">
-            <Router>
-                <Switch>
-                    <Route exact path=''>
-                        <Dashboard />
-                    </Route>
-                    <Route path='*'>
-                        <Redirect to='/'/>
-                    </Route>
-                </Switch>
-            </Router>
-        </div>
-    );
-}
+const App = () => (
+  <div className={styles.app}>
+    <SettingsProvider>
+      <NavigationProvider>
+        <Router>
+          <Switch>
+            <Route path="/dashboard">
+              <Dashboard />
+            </Route>
+            <Route path="/">
+              <Map />
+            </Route>
+            <Route path="*">
+              <Redirect to="/" />
+            </Route>
+          </Switch>
+        </Router>
+      </NavigationProvider>
+    </SettingsProvider>
+  </div>
+);
 
 export default App;

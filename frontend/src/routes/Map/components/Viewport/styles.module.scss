@@ -1,0 +1,24 @@
+.container {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.map {
+  flex: 1 1 0;
+  width: 100%;
+}
+
+.loadingIndicator {
+  flex: 0 0 auto;
+  font-size: 24px;
+  color: #fff;
+}
+
+.error {
+  flex: 0 0 auto;
+  font-size: 24px;
+  color: red;
+}

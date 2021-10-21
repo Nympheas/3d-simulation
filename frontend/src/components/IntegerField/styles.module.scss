@@ -1,0 +1,76 @@
+@import 'styles/variables';
+
+.container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 140px;
+}
+
+input.input {
+  flex: 1 1 0;
+  margin: 0;
+  border: 1px solid $control-border-color;
+  border-radius: 2px;
+  padding: 3px 40px;
+  min-width: 0;
+  height: 30px;
+  font-size: 16px;
+  line-height: 22px;
+  background: #fff;
+  outline: none !important;
+  box-shadow: none !important;
+  text-align: center;
+
+  &:disabled {
+    border-color: $control-disabled-border-color;
+    background-color: $control-disabled-bg-color;
+    color: $control-disabled-text-color;
+    cursor: not-allowed;
+
+    ~ .btnMinus,
+    ~ .btnPlus {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.btnMinus,
+.btnPlus {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.btnMinus {
+  left: 0;
+  background-image: url('/assets/icon-minus.svg');
+}
+
+.btnPlus {
+  right: 0;
+  background-image: url('/assets/icon-plus.svg');
+}
+
+.error {
+  z-index: 3;
+  position: absolute;
+  top: 100%;
+  left: -100px;
+  right: -100px;
+  margin: 1px auto auto;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  padding: 3px 10px;
+  max-width: 300px;
+  background-color: #fff;
+}

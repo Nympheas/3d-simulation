@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 60px;
+  background-color: #333;
+}
+
+.logo {
+  display: block;
+  margin-right: 20px;
+  width: 49px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: auto 40px;
+  background-position: center;
+  background-image: url('/assets/logo-nasa.svg');
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.portFieldLabel {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.portField {
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.portStatus {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  width: 16px;
+  height: 16px;
+}
+
+.successMark,
+.warningMark,
+.errorMark {
+  display: block;
+  border-radius: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.warningMark {
+  background-color: darkorange;
+}
+
+.successMark {
+  background-color: lightseagreen;
+}
+
+.portError {
+  position: relative;
+  width: 16px;
+  height: 16px;
+
+  &:hover {
+    .portErrorMessage {
+      display: block;
+    }
+  }
+}
+
+.errorMark {
+  background-color: red;
+}
+
+.portErrorMessage {
+  display: none;
+  z-index: 3;
+  position: absolute;
+  top: 100%;
+  left: -100px;
+  right: -100px;
+  margin: 1px auto auto;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  padding: 3px 10px;
+  background-color: #fff;
+}
+
+.onlineLabel {
+  flex: 0 0 auto;
+  width: 80px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
+
+  &.isOnline {
+    color: lightgreen;
+  }
+}
+
+.onlineToggle {
+  flex: 0 0 auto;
+}

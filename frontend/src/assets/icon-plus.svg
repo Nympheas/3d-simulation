@@ -1,0 +1,9 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="9px"
+  height="9px"
+  viewBox="0 0 9 9"
+>
+  <line stroke="#333333" x1="4.5" x2="4.5" y2="9" />
+  <line stroke="#333333" y1="4.5" x2="9" y2="4.5" />
+</svg>
